@@ -1,0 +1,1697 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+body {
+    direction: rtl;
+    background-size: 1280px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #efe5e4;
+    margin: 0 auto;
+}
+        
+#container {
+    margin: 0 auto;
+    width: 1280px;
+    box-shadow: -10px 0px 10px -10px #888888, 10px 0px 10px -10px #888888;
+   background-image: url('../img/background.jpg');
+   z-index:-1;
+}
+/*________________תרגיל משולב - גלריה___________________________*/
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+}
+
+.gallery {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.right {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-weight: bold;
+    font-size: 37px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.left {
+    cursor: pointer;
+    position: absolute;
+    top: 413px;
+    margin-top: -35px;
+    right: 1247px;
+    color: black;
+    font-weight: bold;
+    font-size: 37px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+    .left:hover {
+        background-color: rgb(206 196 196 / 38%);
+        right: 1248px;
+        top: 415px;
+        font-size: 39px;
+        width: 29px;
+        padding: 0px;
+    }
+
+
+.right:hover {
+    background-color: rgb(206 196 196 / 38%);
+    right: 17px;
+    top: 428px;
+    font-size: 39px;
+    width: 29px;
+    padding: 0px;
+}
+ 
+.number {
+    color: #ff0000;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.textCaption {
+    text-align: center;
+    background-color: #755f60;
+    padding: 0px 16px;
+    POSITION: absolute;
+    TOP: 0PX;
+    RIGHT: 541PX;
+    color: white;
+    font-size: 20px;
+}
+
+.imgrow:after {
+    content: "";
+    display: table;
+    clear: both;
+    right: 30px;
+}
+
+.Forimage {
+    float: left;
+    width: 16.66%;
+    padding: 41px 5px;
+    right: -107px;
+    position: relative;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+
+
+/*____חיצוני*/
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav li {
+    display: inline-block;
+    float: right;  
+}
+
+/*מיקום פס אפור למעלה*/
+nav ul {
+    text-align: center;
+    height: 54px;
+    background-color: #e2e0e0;
+    margin: 0 auto;
+    width: 1280px;
+}
+
+/*לוגו*/
+nav li a img {
+    width: 220px;
+    height: 39px;
+    position: absolute;
+    top: -37px;
+    right: 4px;
+    padding: 35px;
+}
+
+/*תפריט*/
+nav ul li a {
+    display: block;
+    color: black;
+    width: 231px;
+    height: 25px;
+    position: relative;
+    text-decoration: none;
+    top: 29px;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 23px;
+    margin-top: -2px;
+    padding: 2px;
+}
+
+/*תפריט טקסט+תמונת רקע*/
+a#txt {
+    background-image: url(../img/textur-color.png);
+    background-repeat: no-repeat;
+    padding: 29px;
+    margin-right: 94px;
+    margin-top: -10px;
+    width: 124px;
+    background-size: 108%;
+    background-position: center;
+    z-index: 1;
+}
+
+/*מעבר עכבר על התפריט*/
+    a#txt:hover {
+        background-image: url(../img/textur-color.png);
+        background-repeat: no-repeat;
+        padding: 29px;
+        margin-right: 105px;
+        margin-top: -7px;
+        width: 119px;
+        background-size: 109%;
+        background-position: center;
+    }
+
+
+    /*הטקסט של התפריט מודגש במעבר עכבר*/
+    nav ul li a:hover {
+        font-weight: bold;
+    } 
+
+  /*  _______תפריט פנימי */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    margin-top: 34px;
+    margin-right: 93px;
+    z-index: 2;
+} 
+
+ /* תפריט פנימי-פנימי - איפור שפתיים והדגשות פנים*/
+    nav ul li ul li ul {
+        display: none;
+        position: absolute;
+        margin-top: -25px;
+        margin-right: 100px;
+        background-color: white;
+        }
+
+/* תפריט פנימי-פנימי - איפור שפתיים והדגשות פנים*/
+nav > ul > li > ul li a {
+    width: 104px;
+    font-size: 13pt;
+    border: 2px solid #efe5e4;
+    border-radius: 12px;
+    background-color:white;
+}
+
+/* מעבר עכבר על התפריט הראשי*/
+nav ul li:hover ul {
+    display: block;
+    width: 1px;
+}
+
+/*מעבר עכבר - שלא יראו את התפריט הפנימי-פנימי*/
+    nav ul li:hover ul li ul{
+        display:none;
+    }
+
+     /*מעבר עכבר - שיראו את התפריט הפנימי-פנימי*/
+    nav ul li:hover ul li:hover ul {
+        display: block;
+    }
+
+  /*  מעבר עכבר על התפריט הפנימי - רקע*/
+nav > ul > li ul li a:hover {
+    background-color: #d4c1bf;
+}
+
+/*לא לחיץ*/
+.notActive {
+    cursor: not-allowed;
+    color:#666; 
+}
+
+/*_______פרורי לחם*/
+nav1 ol li {
+    display: inline-block;
+    position: relative;
+    top: 39px;
+    right: 14px;
+    font-family: Calibri;
+    font-size: 17px;
+}
+        nav1 ol li:after {
+            content: ">"; 
+        }
+
+        nav1 ol li:last-child:after {
+            content: "";  
+        }
+
+        nav1 ol li a {
+            text-decoration: none;
+        }
+
+        nav1 ol li a:hover {
+            color:grey;    
+        }
+
+        nav1 ol li a:active {
+            color:navy;
+        }
+
+/*כותרת ראשית*/
+#welcomeText {
+    letter-spacing: 1px;
+    font-family: Calibri;
+    font-size: 37px;
+    text-align: center;
+    padding: 67px;
+    text-shadow: 0 7px 9px rgb(0 0 0 / 20%), 0 -2px 1px #fff;
+    color: #565656;
+    z-index: 1;
+    position: relative;
+}
+
+/*כפתור לעבור לפילטר*/
+#backgroundpic1 {
+    filter: blur(6px);
+    opacity: 0.4;
+    z-index: -3;
+}
+
+/*/ *מיקום למדריך המלא*/
+#Text1 #cklik {
+    position: relative;
+    top: 12px;
+    right: -7px;
+    font-family: Calibri;
+}
+#bottompic {
+    position: relative;
+    margin-top: -396px;
+    filter: blur(7px);
+    opacity: 0.3;
+    z-index: 0;
+}
+/*טקסט-שפתיים*/
+#boxText {
+    width: 508px;
+    height: 436px;
+    margin-top: 536px;
+    padding-right: 192PX;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+/*טקסט-הדגשות פנים*/
+#box {
+    width: 514px;
+    height: 264px;
+    margin-right: 589PX;
+    letter-spacing: 1px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 25px;
+    padding-bottom: 147px;
+}
+
+/*תמונת שפתיים*/
+#img1 img {
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-left: -413px;
+    margin-top: -105px;
+}
+/*תמונת פנים*/
+#img2 img {
+    float: right;
+    width: 386px;
+    height: 419px;
+    margin-top: -119px;
+    margin-right: -441px;
+}
+
+
+/*כותרות שפתיים ופנים*/
+#Text1 h2 {
+    color: #775D5B;
+    font-family: 'Assistant', sans-serif;
+    font-size: 39px;
+    line-height: 20px;
+}
+/*תמונה - עיגול המדריך המלא1*/
+#circlepic {
+    background-image: url(../img/Circle.png);
+    padding: 53px;
+    right: -175px;
+    background-size: 33%;
+    background-position: center;
+    top: -50px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+/*מעבר עכבר*/
+    #circlepic:hover {
+        background-image: url(../img/Circle.png);
+        padding: 53px;
+        right: -175px;
+        background-size: 34%;
+        background-position: center;
+        top: -50px;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+/*תמונה - עיגול המדריך המלא2*/
+#circlepic2 {
+    background-image: url(../img/Circle.png);
+    padding: 53px;
+    right: -175px;
+    background-size: 33%;
+    background-position: center;
+    top: -50px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+/*מעבר עכבר*/
+    #circlepic2:hover {
+        background-image: url(../img/Circle.png);
+        padding: 53px;
+        right: -175px;
+        background-size: 34%;
+        background-position: center;
+        top: -50px;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+/*קישור-למדריך המלא1*/
+#Text1 #textImg {
+    position: relative;
+    top: 18px;
+    right: 13px;
+    font-family: Calibri;
+    text-decoration: none;
+    z-index:1;
+}
+#line{
+    position:relative;
+    top:300px;
+    right:20px;
+}
+/*קישור-למדריך המלא2*/
+#Text1 #textImg2 {
+    position: relative;
+    top: 16px;
+    right: 17px;
+    font-family: Calibri;
+    text-decoration: none;
+    z-index:1;
+}
+
+#Try {
+    top: -502px;
+    right: 411px;
+    position: relative;
+    font-family: 'Assistant', sans-serif;
+    font-size: 35px;
+    z-index: 2;
+}
+
+/* תמונה של הפילטר*/
+#filter {
+    margin-left: auto;
+    position: relative;
+}
+#imgFilter img {
+      float: right;
+    width: 386px;
+    height: 419px;
+    margin-top: -138px;
+    margin-right: -441px;
+}
+#imgphone {
+    width: 580px;
+    margin-top: -650px;
+    margin-right: 581px;
+    position: absolute;
+}
+/*תפריט תחתון*/
+#bottomText ul {
+    list-style: none;
+    width: 559px;
+    margin: 0 auto;
+    z-index: 1;
+}
+        #bottomText ul li {
+            display: inline-block;
+            float: right;
+            z-index: 1;
+        }
+            #bottomText ul li a {
+                display: block;
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 18pt;
+                font-weight: bold;
+                z-index: 1;
+                padding-right: 73px;
+                padding-top: 30px;
+                font-family: 'Assistant', sans-serif;
+            }
+            #bottomText  li{
+                height:1px;
+            }
+/*פס חום תחתון*/
+#botoom {
+    background-color: #755f5f;
+    height: 140px;
+    top: 1900px;
+    z-index: -1;
+}
+
+/*זכויות יוצרים*/
+#Copyright {
+    font-size: 14pt;
+    color: #FFFFFF;
+    top: 82px;
+    position: relative;
+    right: -378px;
+    font-family: 'Assistant', sans-serif;
+}
+
+
+/*כפתור-המדריך המלא*/
+.button {
+    border-radius: 63px;
+    background-color: #9c757070;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px;
+    width: 152px;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+    margin-right: 416px;
+    z-index: 2;
+    top: -487px;
+}
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.1s;
+        font-family: 'Assistant', sans-serif;
+    }
+        .button span:after {
+            content: '\00bb';
+            opacity: 0;
+            top: 0;
+            right: -26px;
+            transition: 0.2s;
+        }
+    .button:hover {
+        background-color: rgb(206 153 155 / 0.07);
+        border-radius: 63px;
+        font-size: 24px;
+        padding: 5px;
+        width: 159px;
+        color: black;    
+    }
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+         
+/*וידאו אישה אחרי*/
+#videoFilter #video1 {
+    opacity: 0;
+    width: 140px;
+    transition: 0.5s ease;
+    top: 398px;
+    position: absolute;
+    right: 854px;
+    z-index: 3;
+}
+/*וידאו אישה לפני*/
+#videoFilter #video2 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 398px;
+    right: 854px;
+    z-index: 2;
+    width: 140px;
+}
+/*מעבר עכבר*/
+#videoFilter:hover #video2 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#videoFilter:hover #video1 {
+    opacity: 1;
+}
+div#videoFilter2 {
+    position: relative;
+    bottom: 1200PX;
+
+}
+div#videoFilter {
+    position: relative;
+    bottom: 975PX;
+}
+    /*וידאו גבר אחרי*/
+#videoFilter2 #video4 {
+    opacity: 0;
+    width: 140px;
+    transition: 0.5s ease;
+    top: 623px;
+    position: absolute;
+    right: 723px;
+    z-index: 3;
+}
+
+/*וידאו גבר לפני*/
+#videoFilter2 #video3 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 623px;
+    right: 723px;
+    z-index: 2;
+    width: 140px;
+}
+
+/*מעבר עכבר*/
+    #videoFilter2:hover #video3 {
+    opacity: 0.3;
+}
+
+/*מעבר עכבר*/
+#videoFilter2:hover #video4 {
+    opacity: 1;
+}
+/*האתר פונה לגברים ונשים - טקסט*/
+#Notonly {
+    margin-top: -71px;
+    letter-spacing: 1px;
+    font-family: Calibri;
+    font-size: 22px;
+    position: absolute;
+}
+
+#example {
+    top: -467px;
+    right: 347px;
+    position: relative;
+    font-family: 'Assistant', sans-serif;
+    font-size: 23px;
+    z-index: 2;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+
+/*/*_____________________עמוד איפור שפתיים______________________*/
+
+
+
+/*יישור עמוד*/
+#space {
+    width: 1280px;
+    height: auto;
+    margin-right: 50px;
+}
+
+/* עמודים פנימיים - כותרת ראשית*/
+.titleH1p {
+    letter-spacing: 1px;
+    font-family: Calibri;
+    font-size: 34px;
+    text-align: right;
+    text-shadow: 0 7px 9px #c4b59d, 0 -2px 1px #fff;
+    color: #565656;
+    margin-top: -178px;
+    position: absolute;
+}
+
+/*תוכן-אודם*/
+.odem {
+    font-size: 21px;
+    width: 592px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 240px;
+    line-height: 31.5px;
+}
+/*תוכן-תוחם*/
+.boundary {
+    font-size: 21px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 0px;
+}
+/*וידאו - אודם*/
+.videolips iframe {
+    margin-right: 729px;
+    margin-top: -265px;
+    width: 457px;
+    height: 250px;
+}
+/*כותרת לסרטון וידאו*/
+.titleVideo {
+    font-family: Calibri;
+    letter-spacing: 1px;
+    margin-right: 894px;
+    margin-top: -265px;
+    width: 457px;
+    height: 250px;
+    margin-top: -279px;
+    position: absolute;
+    color: #924850;
+    font-size: 23px;
+    font-weight: bold;
+    width: 147px;
+}
+
+/*צבע כותרות (אודם ותוחם)*/
+.colortext {
+    color: #775D5B;
+    font-size: 23px;
+}
+/*איך עושים זאת?*/
+.titlelips {
+    font-family: Calibri;
+    font-size: 36px;
+    margin-top: 63px;
+    color: #775D5B;
+}
+/*כותרת*/
+.titleh2 {
+    top: 18px;
+    position: relative;
+    color:#775d5b;
+    font-family:Calibri;
+    font-size:36px;
+}
+
+/*ריבועי תוכן*/
+.Forimage {
+    float: left;
+    padding: 33px 28px;
+}
+.row {
+    margin: 0px -139px;
+    position: relative;
+    right: 139px;
+}
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+#withlipsticpic {
+    right: 87px;
+    top: -1px;
+    position: relative;
+}
+#withlipsticpic1 {
+    margin-right: 266px;
+    margin-top: -157px;
+}
+#withoutlipsticpic {
+    margin-right: 162px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 6px;
+    text-align: inherit;
+    background-color: #f1f1f1;
+    height: 407px;
+    width: 517px;
+    font-size: 21px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    line-height: 31.5px;
+    border-radius: 64px;
+}
+.card h3{
+    text-align:center;
+}
+
+/*כותרות - עם תוחם ובלי תוחם*/
+section h3 {
+    font-size: 23px;
+}
+/*עם תוחם - תוכן*/
+.one1 {
+    font-family: Calibri;
+    font-size: 21px;
+    line-height: 44.5px;
+}
+/*קו תחתון ורוד*/
+.linepic {
+    top: -198px;
+    right: 743px;
+    position: relative;
+}
+/*תמונה של קו תחתון ורוד*/
+.linepic2 {
+    top: -164px;
+    right: 215px;
+    position: relative;
+}
+/*סימון-עיגול*/
+.circleimg {
+    margin-top: -337px;
+    margin-right: 13px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+/*סימון-עיגול*/
+.circleimg1 {
+    margin-top: 50px;
+    margin-right: 13px;
+    background-repeat: no-repeat;
+}
+/*סימון-עיגול*/
+.circleimg2 {
+    margin-top: -324px;
+    margin-right: 13px;
+    background-repeat: no-repeat;
+}
+/*סימון-עיגול*/
+.circleimg3 {
+    margin-top: 50px;
+    margin-right: 13px;
+    background-repeat: no-repeat;
+   
+}
+/*בלי תוחם - תוכן*/
+.two1 {
+    font-family: Calibri;
+    font-size: 21px;
+    line-height: 44.5px;
+}
+/*תמונה עגולה - שפתיים*/
+.piclipsWith {
+    margin-top: -169px;
+    margin-right: 942px;
+}
+/*תמונה עגולה - תוחם*/
+.piclipwith1 {
+    margin-top: -186px;
+    margin-right: 736px;
+}
+/*קיבוץ תכני - בלי תוחם*/
+#without {
+    margin-top: -7px;
+}
+/*תמונה של אודם בלי תוחם*/
+.piclipsWithout {
+    margin-top: -136px;
+    margin-right: 728px;
+}
+/*טקסט העבירי את העכבר*/
+.MoveMousetext {
+    font-family: 'Assistant', sans-serif;
+    font-size: 21px;
+    line-height: 212.5px;
+    margin: 0px;
+    margin-top: -106px;
+}
+/*כותרת מבחר אודמים*/
+.titlelips2 {
+    font-family: Calibri;
+    font-size: 36px;
+    margin-top: 246px;
+    color: #775D5B;
+}
+
+/*מבחר אודמים*/
+/*מרקם*/
+#LipstickType2 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -26px;
+    position: absolute;
+    margin-right: 104px;
+    z-index: 1;
+    width: 37px;
+}
+/*אודם*/
+#LipstickType1 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -40px;
+    margin-right: 103px;
+    width: 40px;
+}
+/*מעבר עכבר*/
+#picType:hover #LipstickType1 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#picType:hover #LipstickType2 {
+    opacity: 1;
+}
+
+/*מרקם*/
+#LipstickType4 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -47px;
+    position: absolute;
+    margin-right: 332px;
+    z-index: 1;
+    width: 50px;
+}
+/*אודם*/
+#LipstickType3 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -46px;
+    margin-right: 339px;
+    width: 26px;
+}
+/*מעבר עכבר*/
+#picType1:hover #LipstickType3 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#picType1:hover #LipstickType4 {
+    opacity: 1;
+}
+/*מרקם*/
+#LipstickType6 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -30px;
+    position: absolute;
+    margin-right: 540px;
+    z-index: 1;
+    width: 58px;
+}
+/*אודם*/
+#LipstickType5 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -53px;
+    margin-right: 554px;
+    width: 36px;
+}
+/*מעבר עכבר*/
+#picType2:hover #LipstickType5 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#picType2:hover #LipstickType6 {
+    opacity: 1;
+}
+/*מרקם*/
+#LipstickType8 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -52px;
+    position: absolute;
+    margin-right: 777px;
+    z-index: 1;
+    width: 54px;
+}
+/*אודם*/
+#LipstickType7 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -30px;
+    margin-right: 779px;
+    width: 51px;
+}
+/*מעבר עכבר*/
+#picType3:hover #LipstickType7 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#picType3:hover #LipstickType8 {
+    opacity: 1;
+}
+/*מרקם*/
+#LipstickType10 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -2px;
+    position: absolute;
+    margin-right: 1002px;
+    z-index: 1;
+    width: 49px;
+}
+/*אודם*/
+#LipstickType9 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -8px;
+    margin-right: 994px;
+    width: 63px;
+}
+/*מעבר עכבר*/
+#picType4:hover #LipstickType9 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#picType4:hover #LipstickType10 {
+    opacity: 1;
+}
+
+ /*   עם תוחם-שלב ראשון*/
+.step1 {
+    margin-top: -70px;
+    margin-right: 774px;
+    font-size: 21px;
+    font-family: Calibri;
+    position: absolute;
+}
+/*עם תוחם-שלב שני*/
+.step2 {
+    margin-top: -70px;
+    margin-right: 1014px;
+    font-size: 21px;
+    font-family: Calibri;
+    position: absolute;
+}
+/*תוכן הטיפים*/
+.tips {
+    font-size: 21px;
+     line-height: 44.5px; 
+    float: right;
+    margin-right:21px;  
+}
+/*כותרת הטיפים*/
+#titletips .titlelips2 {
+    margin-bottom: 0px;
+    margin-top: 175px;
+}
+/*גופן כותרת הטיפים*/
+#titletips{
+ font-family: Calibri;
+}
+
+/*כותרת אולי תתענייני גם ב..*/
+#SelectionPhotosProduct .titlelips2 {
+    margin-top: 234px;
+    position:relative;
+    z-index:1;
+}
+
+/*מרקם-מייקאפ*/
+#picTypeProduct {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -112px;
+    position: absolute;
+    margin-right: 88px;
+    z-index: 2;
+    width: 50px;
+}
+/*/*מייקאפ*/
+#picTypeProduct1 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -112px;
+    margin-right: 98px;
+    width: 33px;
+    z-index: 1;
+}
+
+/*מעבר עכבר*/
+#MakeupProducts:hover #picTypeProduct1 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#MakeupProducts:hover #picTypeProduct {
+    opacity: 1;
+}
+/*מרקם שימר*/
+#picTypeProduct3 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -95px;
+    position: absolute;
+    margin-right: 969px;
+    z-index: 2;
+    width: 86px;
+}
+/*/*שימר*/
+#picTypeProduct2 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -93px;
+    margin-right: 966px;
+    width: 101px;
+    z-index: 1;
+}
+/*מעבר עכבר*/
+#MakeupProducts1:hover #picTypeProduct2 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#MakeupProducts1:hover #picTypeProduct3 {
+    opacity: 1;
+}
+/*מרקם מסקרה*/
+#picTypeProduct5 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -101px;
+    position: absolute;
+    margin-right: 555px;
+    z-index: 2;
+    width: 32px;
+}
+/*מסקרה*/
+#picTypeProduct4 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -133px;
+    margin-right: 552px;
+    width: 44px;
+    z-index: 1;
+}
+/*מעבר עכבר*/
+#MakeupProducts2:hover #picTypeProduct4 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#MakeupProducts2:hover #picTypeProduct5 {
+    opacity: 1;
+}
+
+/*מרקם פודרה*/
+#picTypeProduct7 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -104px;
+    position: absolute;
+    margin-right: 771px;
+    z-index: 2;
+    height: 108px;
+    width: 60px;
+}
+/*/*פודרה*/
+#picTypeProduct6 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -94px;
+    margin-right: 754px;
+    width: 103px;
+    z-index: 1;
+}
+/*מעבר עכבר*/
+#MakeupProducts3:hover #picTypeProduct6 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#MakeupProducts3:hover #picTypeProduct7 {
+    opacity: 1;
+}
+
+/*מרקם קרם*/
+#picTypeProduct9 {
+    opacity: 0;
+    transition: 0.5s ease;
+    margin-top: -102px;
+    position: absolute;
+    margin-right: 325px;
+    z-index:2;
+    width: 59px;
+}
+
+/*/*קרם*/
+#picTypeProduct8 {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    margin-top: -90px;
+    margin-right: 303px;
+    width: 92px;
+    z-index:1;
+}
+
+/*מעבר עכבר*/
+#MakeupProducts4:hover #picTypeProduct8 {
+    opacity: 0.3;
+}
+/*מעבר עכבר*/
+#MakeupProducts4:hover #picTypeProduct9 {
+    opacity: 1;
+}
+
+/*סימון של כל המוצרים*/
+#products {
+    padding-top: 169px;
+    padding-bottom: 172px;
+}
+/*הטקסט-העבירי את העכבר על המוצר*/
+#SelectionPhotosProduct .MoveMousetext {
+    margin-top: -109px;
+    position: absolute;
+    z-index:1;
+}
+
+/*שמות המוצרים*/
+#picText1 {
+    font-family: Calibri;
+    font-size: 22px;
+    margin-top: -190px;
+    margin-right: 85px;
+    position: absolute;
+    padding-top: 30px;
+    z-index:1;
+}
+#picText2 {
+    font-family: Calibri;
+    font-size: 22px;
+    margin-top: -160px;
+    margin-right: 308px;
+    position: absolute;
+    z-index: 1;
+}
+#picText3 {
+    font-family: Calibri;
+    font-size: 22px;
+    margin-top: -160px;
+    margin-right: 542px;
+    position: absolute;
+    z-index: 1;
+}
+#picText4 {
+    font-family: Calibri;
+    font-size: 22px;
+    margin-top: -160px;
+    margin-right: 779px;
+    position: absolute;
+    z-index: 1;
+}
+#picText5 {
+    font-family: Calibri;
+    font-size: 22px;
+    margin-top: -160px;
+    margin-right: 1003px;
+    position: absolute;
+    z-index: 1;
+}
+
+#backpictitle {
+    margin-top: -320px;
+    filter: blur(6px);
+    opacity: 0.5;
+}
+
+
+
+
+
+/*/*______________________________ עמוד אודות*/
+
+
+/*רשימת המסכים שפותחו*/
+#coursName li {
+    font-family:'Assistant', sans-serif;
+    font-size: 16pt;
+    width: 500px;
+    line-height: 1.7;
+    list-style-type: circle;
+    position: relative;
+    top: -2px;
+}
+
+/*כותרת*/
+#titleweb h1 {
+    letter-spacing: 1px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 52px;
+    text-align: right;
+    text-shadow: 0 7px 9px #c4b59d, 0 -2px 1px #fff;
+    color: #565656;
+    position: relative;
+    top: 60px;
+}
+
+/*כותרת*/
+#titleweb h2 {
+    font-family: Calibri;
+    font-size: 36px;
+    margin-top: 112px;
+    color: #464444;
+}
+
+/*טקסט*/
+#maintext {
+    font-size: 21px;
+    width: 949px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    line-height: 31.5px;
+}
+
+/*עיצוב h3*/
+.Developed h3 {
+    font-weight: bold;
+    font-size: 21px;
+    width: 949px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    line-height: 31.5px;
+}
+/*טקסט*/
+.onetext {
+    font-size: 21px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 47px;
+    line-height: 31.5px;
+}
+
+/*טקסט - פותח על ידי*/
+#names {
+    margin-top: 30px;
+    font-size: 21px;
+    width: 708px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 56px;
+    line-height: 15.5px;
+}
+
+/*טקסט - קורסים*/
+#project {
+    margin-top: 30px;
+    font-size: 21px;
+    width: 708px;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 64px;
+    line-height: 15.5px;
+}
+/*רשימת הפרויקטים*/
+#coursName {
+    margin-top: 18px;
+    margin-right: 20px;
+}
+/*מסכים*/
+#screen{
+    margin-top:30px;
+}
+
+#aboutLogo {
+    margin-top: 86px;
+    text-align: center;
+    width: 300px;
+    margin-right: 441px;
+    margin-left: auto;
+    font-size: 17pt;
+    text-decoration: none;
+    padding-bottom: 149px;
+}
+
+
+
+
+
+/*/______________________________________________*דף צור קשר*/
+
+.h1Title {
+    letter-spacing: 1px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 52px;
+    text-align: right;
+    text-shadow: 0 7px 9px #c4b59d, 0 -2px 1px #fff;
+    color: #565656;
+    position: relative;
+    top: 29px;
+}
+#contectpage p {
+    position: relative;
+    top: 3px;
+    right: 0px;
+    font-family: 'Assistant', sans-serif;
+}
+#contectpage {
+    padding-bottom: 106px;
+}
+.required {
+    color: red;
+}
+
+form label {
+    text-decoration: none;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 15pt;
+    line-height: 2;
+}
+
+.contactForm {
+    font-family: 'Assistant', sans-serif;
+    border-radius: 13px;
+    border: 2px solid #cc9fa4;
+    width: 21%;
+}
+
+fieldset {
+    border: none;
+    font-family: 'Assistant', sans-serif;
+    font-size: 15pt;
+}
+
+textarea {
+    font: caption;
+    margin: 0px;
+}
+
+.Forspan {
+    font-family: 'Assistant', sans-serif;
+    font-size: 15pt;
+}
+
+#sendForm {
+    color: #000000;
+    background: #cd9fa5a8;
+    font-size: 20pt;
+    width: 150px;
+    border-radius: 30px;
+}
+
+    #sendForm:hover {
+        background: #efe5e4;
+        color: black;
+        font-size: 21pt;
+    }
+    
+
+
+
+
+   /* דף מפת האתר_________________________________________________________*/
+
+main section{
+    margin-right:100px;
+}
+
+    main section > ul {
+        font-size: 24px;
+        margin-top: 111px;
+        margin-bottom: 241px;
+        display: flex;
+    }
+       
+        main section > ul > li {
+            margin-top: 25px;
+            width: 275px;
+        }
+
+/*  תת קטגוריה*/
+            main section > ul > li > a {
+                display: block;
+                font-family: 'Assistant', sans-serif;
+                margin-bottom: 19px;
+                text-decoration: none;
+                font-size: 30px;
+            }
+
+/*          תת-תת קטגוריה*/
+#sitemap li a {
+    text-decoration: none;
+    font-family: 'Assistant', sans-serif;
+    width: 310px;
+}
+
+/*אודות,צור קשר,מפת אתר*/
+#list {
+    font-size: 24px;
+    margin-top: -43px;
+    display: block;
+}
+    #list:hover {
+        font-size: 24px;
+        margin-top: -43px;
+        display: block;
+      
+    }
+
+/*מעבר עכבר על הטקסט*/
+a.hovertext:hover {
+    color: #441818;
+    width: 310px;
+}
+
+a.hovertext {
+    color: #935d5d;
+    font-weight: bold;
+}
+
+#Category1 {
+    margin-right: 19px;
+}
+
+
+
+
+/*דף ייצוג אינטראקטיבי_______________________________________*/
+
+#WomanMakeupGuide {
+    justify-content: center;
+    display: flex;
+    margin-top: 107px;
+    padding-bottom: 133px;
+}
+iframe {
+    width: 1212px;
+    height: 682px;
+}
+
+
+
+
+
+/*דף פנימי - הדגשות פנים____________________________________________________________*/
+
+/*טקסט*/
+.makeupface {
+    font-size: 21px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    margin-top: 184px;
+    line-height: 31.5px;
+}
+.makeupface1 {
+    font-size: 21px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    margin-top: 120px;
+    line-height: 31.5px;
+}
+
+/*תמונות של הקונסילר*/
+.concealerpic {
+    width: 105px;
+    float: right;
+    margin-top: -50px;
+}
+
+/*כותרת שלבים*/
+.levels {
+    font-size: 21px;
+    font-family: Calibri;
+    margin-top: 95px;
+}
+
+/*תמונות של קו תחתון*/
+.linepic3 {
+    top: -36px;
+    right: -1px;
+    width: 104px;
+    position: relative;
+}
+.linepic4 {
+    top: -38px;
+    right: -5px;
+    width: 87px;
+    position: relative
+}
+.linepic5 {
+    top: -38px;
+    right: -4px;
+    width: 85px;
+    position: relative;
+}
+
+/*שלב שני - טקסט*/
+.makeupface2 {
+    font-size: 21px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    margin-top: -29px;
+    line-height: 31.5px;
+}
+
+/*תמונה של הפנים*/
+#facewoman img {
+    width: 419px;
+    margin-right: 382px;
+    margin-top: 70px;
+}
+
+/*תיבות טקסט צד ימין*/
+.boxmakeup {
+    font-size: 22px;
+    font-family: Assistant;
+    margin-top: -136px;
+    right: 221px;
+    position: relative;
+    width: 159px;
+    border-radius: 19px;
+    text-align: center;
+    background-color: #f6dbd785;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding: 1px;
+    top: 25px;
+}
+/*מעבר עכבר על תיבות הטקסט*/
+    .boxmakeup:hover {
+        font-size: 22px;
+        font-family: Assistant;
+        margin-top: -136px;
+        right: 219px;
+        position: relative;
+        width: 164px;
+        border-radius: 19px;
+        text-align: center;
+        background-color: #efe9e985;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        padding: 1px;
+        top: 25px;
+        font-weight: bold;
+        color: #5c4846;
+    }
+/*תיבות טקסט צד שמאל*/
+.boxmakeup2 {
+    font-size: 22px;
+    font-family: Assistant;
+    margin-top: 17px;
+    right: 797px;
+    top: -59px;
+    position: relative;
+    width: 180px;
+    border-radius: 19px;
+    text-align: center;
+    background-color: #f6dbd785;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding: 1px;
+}
+    /*מעבר עכבר על תיבות הטקסט*/
+    .boxmakeup2:hover {
+        font-size: 22px;
+        font-family: Assistant;
+        margin-top: 17px;
+        right: 797px;
+        top: -59px;
+        position: relative;
+        width: 191px;
+        border-radius: 19px;
+        text-align: center;
+        background-color: #efe9e985;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        padding: 1px;
+        font-weight: bold;
+        color: #5c4846;
+    }
+#boxmakeup1 {
+    margin-top: 35px;
+}
+
+/*סירטון לדוגמה*/
+.titleVideo3 {
+    font-family: Calibri;
+    letter-spacing: 1px;
+    margin-right: 544px;
+    margin-top: 57px;
+    position: absolute;
+    color: #924850;
+    font-size: 23px;
+    font-weight: bold;
+}
+.videoface iframe {
+    margin-right: 339px;
+    top: 104px;
+    width: 532px;
+    height: 358px;
+    position: relative;
+}
+iframe{
+   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+
+#skip {
+    text-decoration: none;
+    background-color: #f3f3f3;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Assistant';
+    margin-bottom: -52px;
+    width: 86px;
+    height: 47px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    top: 3px;
+    right: -93px;
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}

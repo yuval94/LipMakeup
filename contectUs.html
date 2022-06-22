@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <link rel="icon" href="img/לוגו - הדרך אל היופי.png" />
+    <meta charset="utf-8" />
+    <title>צור קשר - הדרך אל היופי</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+
+    <!--<link href="styles/reset.css" rel="stylesheet" />-->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link rel="icon" href="img/makeup.png" />
+
+
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="skip">
+            <a href="#contectpage">דלג לתוכן העמוד</a>
+        </div>
+        <header>
+            <nav aria-label="תפריט ראשי עליון">
+                <ul>
+                    <li>
+                        <a href="index.html" aria-label="לעמוד הראשי"><img src="img/logo5.png" /></a>
+                    </li>
+                    <li>
+                        <a id="txt" href="#"> רמות איפור</a>
+                        <ul>
+                            <li><a href="#" class="notActive">מתקדמים</a></li>
+                            <li>
+                                <a href="#">מתחילים</a>
+                                <ul>
+                                    <li><a href="makeupLips.html">איפור שפתיים</a></li>
+                                    <li><a href="#">הדגשות פנים</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="txt" href="#" class="notActive">סגנון איפור</a>
+                        <ul>
+                            <li><a href="#" class="notActive">טבעי</a></li>
+                            <li><a href="#" class="notActive">עוצמתי</a></li>
+                            <li><a href="#" class="notActive">עדין</a></li>
+                            <li><a href="#" class="notActive">מעושן</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="txt" href="#" class="notActive">טיפוח עור</a>
+                        <ul>
+                            <li><a href="#" class="notActive">עור רגיל</a></li>
+                            <li><a href="#" class="notActive">עור שומני</a></li>
+                            <li><a href="#" class="notActive">עור יבש</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="txt" href="#" class="notActive">המלצות </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav1>
+                <ol>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="contectUs.html">צור קשר</a></li>
+                </ol>
+            </nav1>
+        </header>
+        <section id="space">
+            <h1 class="h1Title">צור קשר</h1>
+
+            <form id="contectpage">
+                <p class="required" id="must">* שדה חובה</p>
+                <label for="fulltName">
+                    <span class="required">* </span> שם מלא: <br />
+                    <input type="text" id="fulltName" required aria-required="true" placeholder="הכניסי שם פרטי ומשפחה" class="contactForm" />
+                </label> <br />
+                <label for="idNumber">
+                    <span class="required">* </span>תעודת זהות: <br />
+                    <input type="text" required aria-required="true" name="idNumber" id="idNumber" placeholder="נא להקליד 9 ספרות" class="contactForm" pattern="[0-9]{9}" />
+                </label> <br /><br />
+                <fieldset>
+                    <legend>
+                        מגדר: <br />
+                    </legend>
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" /> זכר<br />
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" /> נקבה
+                    </label>
+                </fieldset>
+
+                <label for="email">
+                    <span class="required">* </span>דואר אלקטרוני: <br />
+                    <input type="text" required aria-required="true" name="email" id="email" placeholder="הזיני דואר אלקטרוני" class="contactForm" /> <br />
+                </label>
+
+
+
+                <br />
+                <div class="Forspan">
+                    <span class="required" required aria-required="true">* </span>רמת איפור: <br />
+                    <select id="contactForm">
+                        <option value="1" selected>נא לבחור ערך</option>
+                        <option value="2">מתחילים</option>
+                        <option value="3">מתקדמים</option>
+                    </select>
+                </div>
+                <br /><br />
+                <label for="myTextarea" required aria-required="true">
+                    <span class="required">* </span> רשמי את הודעתך: <br />
+                    <textarea id="myTextarea" placeholder="כתבי כאן את דעתך" rows="6" class="contactForm"></textarea>
+                </label>
+                <br /><br />
+                <label for="sendForm">
+                    <input type="submit" id="sendForm" value="שלח טופס" />
+                </label>
+
+            </form>
+        </section>
+
+        <footer id="botoom">
+            <nav3 id="bottomText" aria-label="תפריט ניווט תחתון">
+                <ul>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="siteMap.html">מפת האתר</a></li>
+                    <li><a href="contectUs.html">צור קשר</a></li>
+                </ul>
+                <p id="Copyright">חלק מהגרפיקות נלקחו מאתרים שונים -  <a href="זכויות יוצרים.pdf" target="_blank">זכויות יוצרים</a></p>
+            </nav3>
+            <p id="Notonly">*האתר מנוסח בלשון נקבה אך פונה לנשים וגברים כאחד</p>
+        </footer>
+
+    </div>
+</body>
+</html>
+
+
